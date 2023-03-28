@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data['products'] = Product::all();
+        $data['products'] = Product::with('category')->get();
 
         return view('product/index',$data);
     }
