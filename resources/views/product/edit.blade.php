@@ -2,7 +2,7 @@
 
 @section('content')
     
-    <form  action="{{url('/product') }}" method="POST"> 
+    <form  action="{{url('/product/add') }}" method="POST"> 
         @method('PUT')
         @csrf
         <div class="mb-3">
@@ -16,7 +16,7 @@
       </div>
       <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Kategori ID</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" name="category_id" value ="{{ $products->category_id }}" >
+          <input type="text" class="form-control" id="exampleInputPassword1" name="category_id" value ="{{ $products->category_id}}" >
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Price</label>

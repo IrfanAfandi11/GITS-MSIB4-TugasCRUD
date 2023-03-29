@@ -2,9 +2,10 @@
 
 use App\Models\Product;
 
-use App\Http\Controllers\ProductController;
-
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\cartController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('/product',[ProductController::class, 'index']);
-Route::get('/product/cart',[ProductController::class, 'index']);
+Route::get('/product/cart',[cartController::class, 'index']);
 Route::get('/product/add',[ProductController::class, 'create']);
 Route::get('/product/{id}/edit',[ProductController::class, 'edit']);
 
