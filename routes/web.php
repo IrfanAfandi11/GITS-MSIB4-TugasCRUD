@@ -22,6 +22,7 @@ Route::get('/', function () {
 });
 
 Route::get('/product',[ProductController::class, 'index']);
+Route::get('/product/cart',[ProductController::class, 'index']);
 Route::get('/product/add',[ProductController::class, 'create']);
 Route::get('/product/{id}/edit',[ProductController::class, 'edit']);
 
