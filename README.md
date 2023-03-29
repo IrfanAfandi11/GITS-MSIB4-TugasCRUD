@@ -1,1 +1,1 @@
-#Irfan Afandi | Universitas Islam Sulatan Agung 
+Irfan Afandi | Universitas Islam Sulatan Agung 
