@@ -23,6 +23,7 @@
         <input type="text" class="form-control" id="exampleInputPassword1" name="price" value="{{ $products->price }}">
     </div>
       <button type="submit" class="btn btn-primary">ubah</button>
+      
     </form>
 
 @endsection
