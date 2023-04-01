@@ -11,7 +11,7 @@
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="#"></a>
           <a class="nav-link" href="{{ url ('product') }}">Product</a>
-
+          <a class="nav-link" href="{{ url('product/Categori') }}">Category</a>
           <a class="nav-link" href="{{ url('product/cart') }}">Cart</a>
           <a class="nav-link disabled"></a>
         </div>
@@ -29,28 +29,29 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     @foreach ($products as $item)
-
-      
-    <div class="card mt-3" style="width: 18rem;">
-            <div class="card-body">
-                <div class="card-title">
-                    {{ $item->nama}} 
-                </div>
-                <div class="card-title">
-                  {{ $item->category_id}} 
-              </div>
-                <div class="card-text">
-                    {{ $item->description }}
-                </div>
-                <div class="card-text">
-                    {{ $item->price }}
-                </div>
-                <a href="/product/{{$item->id }}/edit">
-                    <button class="btn btn-warning mt-2" type="button">ubah</button>
-                <a href="/product/{{$item->id }}/delete">
-                    <button class="btn btn-warning mt-2" type="button">Hapus</button>
-                </a>
+    <div class="d-flex">
+      <div class="card mt-3" style="width: 18rem;">
+        <div class="card-body">
+            <div class="card-title">
+                {{ $item->nama}} 
             </div>
+            <div class="card-title">
+              {{ $item->description}} 
+          </div>
+            <div class="card-text">
+                {{ $item->category->nama }}
+            </div>
+            <div class="card-text">
+                {{ $item->price }}
+            </div>
+            <a href="/product/{{$item->id }}/edit">
+                <button class="btn btn-warning mt-2" type="button">ubah</button>
+            <a href="/product/{{$item->id }}/delete">
+                <button class="btn btn-warning mt-2" type="button">Hapus</button>
+            </a>
         </div>
+    </div>
+  </div>
+    
     @endforeach
 @endsection

@@ -19,30 +19,23 @@
     </div>
   </nav>
 
-    <a href="{{ url('product/add') }}">
-        <button class="btn btn-primary float-end mt-4" type="button">+ Tambah Produk</button>
-    </a>
 <!doctype html>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <div class="card-body ">
+    <div class="card-body">
       <table class="table ">
           <thead>
               <tr>
-                  <th>Nama</th>
-                  <th>description</th>
+                  <th>Nomer</th>
                   <th>Category</th>
-                  <th>Prace</th>
               </tr>
           </thead>
           <tbody>
               @forelse ($products as $item)
                   <tr>
-                      <td>{{ $item->nama }}</td>
-                      <td>{{ $item->description }}</td>
+                      <td>{{ $item->id}}</td>
                       <td>{{ $item->category->nama }}</td>
-                      <td>{{ $item->price }}</td>
                   </tr>
                   
           </thead>
